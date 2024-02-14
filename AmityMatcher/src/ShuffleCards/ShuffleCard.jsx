@@ -66,6 +66,7 @@ function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId})
                                 found: false,
                                 error: "Not enough users have registered on this wonderful app for us to find you a date. Spread the word and try again later"
                             }
+                            console.log("Here")
                             //Send this data to app.jsx
                             setMatchCallback(matchData)
                             break;    
