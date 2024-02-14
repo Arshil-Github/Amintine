@@ -34,7 +34,10 @@ function App() {
 
       let fetchResponse = await fetch('https://amintine-backend.onrender.com/signUp', {
         method: "POST",
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Credentials': 'true'
+        },
         body: JSON.stringify(userData)
       })
       .then((fetchResponse) => {
