@@ -36,7 +36,7 @@ function App() {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://amintine.vercel.app',
+          'Access-Control-Allow-Origin': 'https://localhost:3000',
           'Access-Control-Allow-Credentials': 'true'
         },
         body: JSON.stringify(userData)
