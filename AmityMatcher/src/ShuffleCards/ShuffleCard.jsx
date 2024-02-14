@@ -7,7 +7,7 @@ let gotMatch = false;
 function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId})
 {
     
-    const fetchURL = "http://localhost:3000/findAMatch/" + userId
+    const fetchURL = "https://amintine-backend.onrender.com/findAMatch/" + userId
 
     
     if(!gotMatch)
