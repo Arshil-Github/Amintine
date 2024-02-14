@@ -5,7 +5,11 @@ const cors = require("cors")
 
 const app = express()
 app.use(bodyParser.json())
-app.use(cors())
+app.use(cors({
+    origin: [],
+    methods: ["POST", "GET"],
+    credentials: true,
+}))
 
 const boysHostel = [15, 4, 7, 8];
 const girlsHostel = [1, 5, 6, 9];
