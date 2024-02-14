@@ -1,0 +1,9 @@
+Sakura Inspired Color Pallette
+
+
+#ae6c94 ---> Pink
+#da9bcc ----> Lighter Pink
+#392638 ---> Maroon Dark
+#734c63 ---> Pink + Maroon ig
+#d6d6e0 ----> White
+#6e4559 ---> Darker Pink

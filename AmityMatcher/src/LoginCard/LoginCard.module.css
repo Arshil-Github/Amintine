@@ -1,0 +1,123 @@
+
+.card{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cardTitle{
+    
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.644);
+    letter-spacing: -4px;
+    word-spacing: 5px;
+    height: fit-content;
+
+    margin-bottom: 30px;
+
+}
+.nameInput, .roomInput, .instaInput, .bioInput{
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 40px;
+    padding: 5px;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hostelDropDown .selectHostelButton{
+    margin-bottom: 20px;
+    width: 105%;
+    min-height: 40px;
+    padding: 5px;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+
+    background-color: #734c63;
+    border-style: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+}
+.hostelDropDown .hostelDropDownContent.active{
+    width: 80%;
+
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: solid 3px;
+    border-color: #734c63;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+    opacity: 100;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+
+}
+
+.hostelDropDown .hostelDropDownContentInactive{
+    
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    pointer-events: none
+}
+
+.hostelDropDown button{
+    margin-top: 0px;
+    width: 100%;
+    min-height: 20px;
+    padding: 3px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 2pc;
+    
+    background-color: rgb(255, 255, 255);
+    color: #734c63;
+    border: none;
+}
+.hostelDropDown button:hover{
+    
+    background-color: #734c63;
+    color: rgb(255, 255, 255);
+
+
+    border: none;
+    border-radius: 10px;
+
+    transition: 0.5s;
+}
+
+
+.submitButton{
+    margin-bottom: 20px;
+    width: 105%;
+    min-height: 40px;
+    padding: 10px;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform:capitalize;
+    color: rgb(255, 255, 255);
+    letter-spacing: -1px;
+
+    background-color: #FF3E4D;
+    border-style: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.71);
+}

@@ -1,0 +1,38 @@
+.EnterButton{
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform:capitalize;
+    color: rgb(255, 255, 255);
+    letter-spacing: -1px;
+
+    background-color: #FF3E4D;
+    border-style: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.71);
+}
+.infoDiv{
+    min-height: 330px;
+}
+.infoHead{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.644);
+    letter-spacing: -2.5px;
+    text-align: left;
+    word-spacing: 5px;
+
+}
+.info{
+    margin-top: -20px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.4pc;
+}
