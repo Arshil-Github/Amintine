@@ -17,8 +17,6 @@ function App() {
   const [appState, setAppState] = useState("homeState")
   //Add a home page
   const [bodyContent, setBodyContent] = useState()
-
-  headers.append('Access-Control-Allow-Credentials', 'true');
   
   async function ChangeLoginData(inputData){
     if(inputData.isValid)
