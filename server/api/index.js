@@ -1,5 +1,5 @@
 const express = require("express")
-const {UserDb} = require("./database")
+const {UserDb} = require("../database")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 
