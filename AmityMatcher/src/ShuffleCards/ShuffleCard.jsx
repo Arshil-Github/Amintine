@@ -84,7 +84,7 @@ function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId})
         }
         catch(e)
         {
-
+            console.log(e)
             setMatchCallback(matchData)
         }
     }
