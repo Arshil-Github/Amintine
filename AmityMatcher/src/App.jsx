@@ -12,9 +12,9 @@ function App() {
 
   const [loginData, setLoginData] = useState({
     hostelNumber: 5,
-    _id: "65c9fc5dd591d7152e541c9b"
+    _id: "65ccec6010ede58c05e39ec2"
   })
-  const [appState, setAppState] = useState("homeState")
+  const [appState, setAppState] = useState("loginState")
   //Add a home page
   const [bodyContent, setBodyContent] = useState()
   
