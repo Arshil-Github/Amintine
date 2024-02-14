@@ -17,8 +17,7 @@ function App() {
   const [appState, setAppState] = useState("homeState")
   //Add a home page
   const [bodyContent, setBodyContent] = useState()
-
-
+  
   async function ChangeLoginData(inputData){
     if(inputData.isValid)
     {
@@ -33,10 +32,13 @@ function App() {
         bio: inputData.bio,
       }
 
-      let fetchResponse = await fetch('http://localhost:3000/signUp', {
+      let fetchResponse = await fetch('https://amintine-backend.onrender.com/signUp', {
         method: "POST",
-        mode: "cors",
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://localhost:3000',
+          'Access-Control-Allow-Credentials': 'true'
+        },
         body: JSON.stringify(userData)
       })
       .then((fetchResponse) => {
