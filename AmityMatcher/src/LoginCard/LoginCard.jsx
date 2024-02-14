@@ -76,7 +76,7 @@ function LoginCard({setLoginDataCallback})
             </div>
         </div>
 
-        <input type="number" placeholder="Room (a unique identifier)" className={styles.roomInput} id='roomInput'/>
+        <input type="number" placeholder="Room (as a unique id) (only use numbers)" className={styles.roomInput} id='roomInput'/>
 
         <input type="text" placeholder="Instagram Id" className={styles.instaInput} id='instaInput'/>
 
@@ -91,12 +91,16 @@ function LoginCard({setLoginDataCallback})
 
             let isValid = (nameValue != "") && (roomValue != "") && (hostelValue != 0)
 
+            
+            let roomTemp = roomValue.match(/(\d+)/);
+            let numbericRoomNumber = roomTemp[0]
+
             if(isValid)
             {
                 setLoginDataCallback({
                     name: nameValue,
                     hostel: hostelValue,
-                    room: roomValue,
+                    room: numbericRoomNumber,
                     insta: instaValue,
                     bio: bioValue,
                     isValid: true
