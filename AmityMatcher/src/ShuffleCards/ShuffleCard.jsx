@@ -39,50 +39,47 @@ function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId})
         }
 
         try{
-            fetch(fetchURL).then((fetchResponse) =>{
-                fetchResponse.json((jsonResponse) =>{
-                    switch (jsonResponse.error) {
-                        case null:
-                            matchData = {
-                                name: jsonResponse.match.username,
-                                hostelNumber: jsonResponse.match.hostelNumber,
-                                instaId: jsonResponse.match.instaId,
-                                bio: jsonResponse.match.bio,
-                                found: true
-                            }
-                            //Send this data to app.jsx
-                            setMatchCallback(matchData)
-                            break;
-                        case "timeIssue":
-                            matchData = {
-                                found: false,
-                                error: "You are making too many requests. You can only make requests every 3 hours"
-                            }
-                            //Send this data to app.jsx
-                            setMatchCallback(matchData)
-                            break;
-                        case "userNumberIssue":
-                            matchData = {
-                                found: false,
-                                error: "Not enough users have registered on this wonderful app for us to find you a date. Spread the word and try again later"
-                            }
-                            //Send this data to app.jsx
-                            setMatchCallback(matchData)
-                            break;    
-                        default:
-                            //Error is found
-                            matchData = {
-                                found: false,
-                                error: "Something went Wrong"
-                            }
-                            setMatchCallback(matchData)
-                            break;
+            let fetchResponse = await fetch(fetchURL)
+            let jsonResponse = await fetchResponse.json()
+    
+    
+            switch (jsonResponse.error) {
+                case null:
+                    matchData = {
+                        name: jsonResponse.match.username,
+                        hostelNumber: jsonResponse.match.hostelNumber,
+                        instaId: jsonResponse.match.instaId,
+                        bio: jsonResponse.match.bio,
+                        found: true
                     }
-                })
-            })
-            
-    
-    
+                    //Send this data to app.jsx
+                    setMatchCallback(matchData)
+                    break;
+                case "timeIssue":
+                    matchData = {
+                        found: false,
+                        error: "You are making too many requests. You can only make requests every 3 hours"
+                    }
+                    //Send this data to app.jsx
+                    setMatchCallback(matchData)
+                    break;
+                case "userNumberIssue":
+                    matchData = {
+                        found: false,
+                        error: "Not enough users have registered on this wonderful app for us to find you a date. Spread the word and try again later"
+                    }
+                    //Send this data to app.jsx
+                    setMatchCallback(matchData)
+                    break;    
+                default:
+                    //Error is found
+                    matchData = {
+                        found: false,
+                        error: "Something went Wrong"
+                    }
+                    setMatchCallback(matchData)
+                    break;
+            }
     
         }
         catch(e)
