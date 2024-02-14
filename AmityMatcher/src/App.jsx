@@ -33,7 +33,7 @@ function App() {
         bio: inputData.bio,
       }
 
-      let fetchResponse = await fetch('https://amintine-backend.onrender.com/findAMatch/signUp', {
+      let fetchResponse = await fetch('https://amintine-backend.onrender.com/signUp', {
         method: "POST",
         mode: "cors",
         headers: { 'Content-Type': 'application/json' },
