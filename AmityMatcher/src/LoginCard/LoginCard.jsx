@@ -105,6 +105,7 @@ function LoginCard({setLoginDataCallback})
                     bio: bioValue,
                     isValid: true
                 })
+                alert("The server sometimes can take upto a minute to load so please wait your request is proccessing (Sasta server h)")
             }
         }}>
             SUBMIT
@@ -149,6 +150,20 @@ function LoginCard({setLoginDataCallback})
         if(isHostelNumberValid(selectedHostel))
         {
             let outputString = `Hostel ${selectedHostel}`
+
+            if(selectedHostel == 15)
+            {
+                outputString = "Hostel H5 Boys"
+            }
+            else if(selectedHostel == 8)
+            {
+                outputString = "Day Scholar Male"
+            }
+            else if(selectedHostel == 9)
+            {
+                outputString = "Day Scholar Female"
+            }
+            
             return outputString
         }
         else{
