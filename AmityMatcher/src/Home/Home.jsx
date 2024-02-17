@@ -28,6 +28,7 @@ function Home({EnterMatchmakerCallback})
                 Enter the MatchMaker
             </button>
 
+            <p className={styles.appCloseNote}>This website will be taken down on 21st February 2024. Thank you so much for using this app! I will be back next year with something better. Write a message to me using the feedback form on the last page</p>
         </div>
     )
 }
