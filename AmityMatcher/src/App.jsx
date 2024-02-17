@@ -14,7 +14,7 @@ function App() {
     hostelNumber: 5,
     _id: "65ccec8d10ede58c05e39ec7"
   })
-  const [appState, setAppState] = useState("matchState")
+  const [appState, setAppState] = useState("homeState")
   //Add a home page
   const [bodyContent, setBodyContent] = useState()
   
