@@ -4,9 +4,9 @@ import MatchSingleUI from './matchSingleUI'
 import {React, useState, useEffect} from 'react'
 
 let gotMatch = false;
-function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId})
+function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId, userMatches})
 {
-    
+    let matches = (userMatches == undefined) ? [] : userMatches;
     const fetchURL = "https://amintine-backend.onrender.com/findAMatch/" + userId
 
     
@@ -113,7 +113,12 @@ function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId})
                 Find a Match
             </button>
             
-
+            <p className={(matches.length == 0) ? styles.yourMatchesInactive : styles.yourMatchesActive}>People who matched with you</p>
+            {
+                matches.map((element) =>{
+                    return <MatchSingleUI name={element.matchName} hostel={GiveHostelNumber(parseInt(element.matchHostel))}></MatchSingleUI>
+                })
+            }
             {/* <div className={styles.matchSection}>
 
                 <p className={styles.matchHeading}>My Matches</p>
@@ -125,4 +130,23 @@ function ShuffleCard({findMatchButtonCallback, setMatchCallback , userId})
     )
 }
 
+function GiveHostelNumber(hostelNumber)
+{
+    let outputString = `Hostel ${hostelNumber}`
+
+    if(hostelNumber == 15)
+    {
+        outputString = "Hostel H5 Boys"
+    }
+    else if(hostelNumber == 8)
+    {
+        outputString = "Day Scholar Male"
+    }
+    else if(hostelNumber == 9)
+    {
+        outputString = "Day Scholar Female"
+    }
+    
+    return outputString
+}
 export default ShuffleCard

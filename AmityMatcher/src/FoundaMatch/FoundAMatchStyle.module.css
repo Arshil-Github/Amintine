@@ -55,3 +55,49 @@
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 0.201);
 }
+
+.feedbackButton{
+    
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform:capitalize;
+    color: rgb(255, 255, 255);
+    letter-spacing: -1px;
+
+    background-color: #FF3E4D;
+    border-style: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.71);
+
+}
+
+.feedbackArea{
+    margin-bottom: 0px;
+    width: 90%;
+    min-height: 40px;
+    padding: 5px;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+.feedback{
+    margin-top: 80px;
+}
+
+.feedbackTitle{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.824);
+    text-decoration: overline;
+}

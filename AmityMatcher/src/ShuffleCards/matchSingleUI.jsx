@@ -8,15 +8,10 @@ function MatchSingleUI(props)
        </p>
 
 
-        <div className={styles.hostelInsta}>
-            <p className={styles.instaId}>
-            {props.insta}
-        </p>
-
-        <p className={styles.hostel}>
+        
+       <p className={styles.hostel}>
             {props.hostel}
         </p>
-        </div>
        
     </div>
 }

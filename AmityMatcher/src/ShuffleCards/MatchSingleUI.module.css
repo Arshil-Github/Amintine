@@ -8,8 +8,12 @@
 
     padding: 4px;
     display: flex;
+    justify-content: space-evenly;
     text-align: justify;
+    align-items: center;
     gap: 10px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .titleHead{
@@ -19,11 +23,16 @@
     letter-spacing: 1px;
 
     width:60%;
+    color: rgba(255, 33, 33, 0.644);
 }
-
-.hostelInsta{
+.hostel{
+    font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    
-    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.644);
+
+    text-align: right;
+    margin-right: 10px;
+
 }

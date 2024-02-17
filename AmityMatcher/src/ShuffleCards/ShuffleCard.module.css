@@ -96,3 +96,16 @@
 .errorDiv_Inactive{
     opacity: 0;
 }
+
+.yourMatchesActive{
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.644);
+    letter-spacing: -1.5px;
+    text-align: left;
+    word-spacing: 3px;
+    opacity: 100;
+}
+.yourMatchesInactive{
+    opacity: 0;
+}

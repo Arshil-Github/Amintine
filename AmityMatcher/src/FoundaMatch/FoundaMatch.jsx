@@ -6,7 +6,7 @@ function FoundAMatch(props)
 {
     //Props will have a hostel number from which I will do a fetchCall to find a Match
     //setMatchInfo(props.matchData)
-    
+    const fetchURL = "https://amintine-backend.onrender.com/feedback/" + props.userData._id
     const [mainDiv, setMainDiv] = useState(null); // Initialize mainDiv to a placeholder
 
     useEffect(() => {
@@ -55,6 +55,36 @@ function FoundAMatch(props)
 
             {mainDiv}
             
+            <div className={styles.feedback}>
+
+                <p className={styles.feedbackTitle}>Message for the creator</p>
+                <textarea name="feedback" className={styles.feedbackArea} id="textAreaFd" cols="30" rows="5"></textarea>
+
+                <button className={styles.feedbackButton} 
+                onClick={() =>{
+                    let feedbackContent = document.getElementById("textAreaFd").value
+
+                    let fetchBody = {
+                        feedback: feedbackContent
+                    }
+
+                    if(feedbackContent != "")
+                    {
+                        fetch(fetchURL, {
+                            method: "POST",
+                            headers: { 
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': 'https://localhost:3000',
+                            'Access-Control-Allow-Credentials': 'true'
+                            },
+                            body: JSON.stringify(fetchBody)
+                        })
+                    }
+                    
+                }}>
+                    Submit Feedback
+                </button>
+            </div>
         </div>
     )
 }

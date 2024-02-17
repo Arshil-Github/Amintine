@@ -75,8 +75,8 @@ function LoginCard({setLoginDataCallback})
                 }>Day Scholar Girl</button><br />
             </div>
         </div>
-
-        <input type="number" placeholder="Room (as a unique id) (only use numbers)" className={styles.roomInput} id='roomInput'/>
+{/* 
+        <input type="number" placeholder="Room (as a unique id) (only use numbers)" className={styles.roomInput} id='roomInput'/> */}
 
         <input type="text" placeholder="Instagram Id" className={styles.instaInput} id='instaInput'/>
 
@@ -85,22 +85,23 @@ function LoginCard({setLoginDataCallback})
         <button className={styles.submitButton} onClick={()=>{
             let nameValue = document.getElementById("nameInput").value;
             let hostelValue = GetHostelNumber();
-            let roomValue = document.getElementById("roomInput").value;
+            // let roomValue = document.getElementById("roomInput").value;
+            let roomValue = 624;
             let instaValue = document.getElementById("instaInput").value;
             let bioValue = document.getElementById("bioInput").value;
 
             let isValid = (nameValue != "") && (roomValue != "") && (hostelValue != 0)
 
             
-            let roomTemp = roomValue.match(/(\d+)/);
-            let numbericRoomNumber = roomTemp[0]
+            // let roomTemp = roomValue.match(/(\d+)/);
+            // let numbericRoomNumber = roomTemp[0]
 
             if(isValid)
             {
                 setLoginDataCallback({
                     name: nameValue,
                     hostel: hostelValue,
-                    room: numbericRoomNumber,
+                    room: roomValue,
                     insta: instaValue,
                     bio: bioValue,
                     isValid: true
@@ -111,6 +112,9 @@ function LoginCard({setLoginDataCallback})
             SUBMIT
             </button>
 
+        <p className={styles.instaDisclaimer}>Your public Instagram info and Bio will be visible in-app.</p>
+
+        <p className={styles.instaDisclaimer}>Your unique Instagram ID unlocks your matches! Enter a valid account, as it'll be your key to seeing who matched with you later.</p>
         </div>
         </>
     )

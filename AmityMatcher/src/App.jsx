@@ -12,9 +12,9 @@ function App() {
 
   const [loginData, setLoginData] = useState({
     hostelNumber: 5,
-    _id: "65ccec6010ede58c05e39ec2"
+    _id: "65ccec8d10ede58c05e39ec7"
   })
-  const [appState, setAppState] = useState("homeState")
+  const [appState, setAppState] = useState("matchState")
   //Add a home page
   const [bodyContent, setBodyContent] = useState()
   
@@ -45,6 +45,7 @@ function App() {
 
         fetchResponse.json().then((jsonResponse) =>{
           console.log(jsonResponse)
+          //this jsonresponse will contain matches
           setLoginData(jsonResponse.user)
           setAppState("shuffleState")
         })
@@ -86,7 +87,9 @@ function App() {
           matchData = data
           console.log(matchData)
         }
-      }/>)
+      }
+      userMatches={loginData.matches}
+      />)
     }
     else if(appState == "matchState")
     {
