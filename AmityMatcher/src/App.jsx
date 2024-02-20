@@ -4,6 +4,7 @@ import ShuffleCard from './ShuffleCards/ShuffleCard'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Home from './Home/Home'
+import Closed from './Closed/Closed'
 import FoundAMatch from './FoundaMatch/FoundaMatch'
 import { useEffect, useState} from 'react'
 
@@ -14,7 +15,7 @@ function App() {
     hostelNumber: 5,
     _id: "65ccec8d10ede58c05e39ec7"
   })
-  const [appState, setAppState] = useState("homeState")
+  const [appState, setAppState] = useState("closedState")
   //Add a home page
   const [bodyContent, setBodyContent] = useState()
   
@@ -95,6 +96,10 @@ function App() {
     {
       setBodyContent(<FoundAMatch userData={loginData} matchData={matchData}/>)
     }
+    else if(appState == "closedState")
+    {
+      setBodyContent(<Closed/>)
+    }
 
   }, [appState])
 
@@ -104,7 +109,7 @@ function App() {
       <div className="bodyContent">
         {bodyContent}
       </div>
-      <p className="creditText">AMINTINE by cupid</p>
+      <p className="creditText">AMINTINE</p>
     </div>
   )
 }
